@@ -19,15 +19,22 @@ mydb = mysql.connector.connect(
 # Créez un curseur
 cursor = mydb.cursor()
 
-# Exécutez une requête SQL pour récupérer des données (dans cet exemple, on récupère les noms des tables)
-cursor.execute("SHOW TABLES")
+# Exécutez une requête SQL pour récupérer des données de chaque table
+tables = ['adresse', 'camera', 'controle_fuite', 'equipement_industriel', 'langue',
+          'mission', 'numero_mission', 'resident', 'scan_code_barre', 'site', 'utilisateur', 'utilise']
 
-# Récupérez toutes les lignes résultantes
-tables = cursor.fetchall()
-
-# Affichez les résultats
 for table in tables:
-    print(table)
+    print(f"\nContenu de la table '{table}':")
+
+    # Exécutez une requête SQL pour récupérer tous les éléments de la table
+    cursor.execute(f"SELECT * FROM {table}")
+
+    # Récupérez toutes les lignes résultantes
+    rows = cursor.fetchall()
+
+    # Affichez les résultats
+    for row in rows:
+        print(row)
 
 # Fermez le curseur et la connexion
 cursor.close()
