@@ -10,8 +10,8 @@ try:
             print("CIAO", end='', flush=True)
         time.sleep(1)
         print(" ")
-except KeyboardInterrupt:
-    print("\nInterruption du programme par l'utilisateur.")
+except KeyboardInterrupt as Exc:
+    print(Exc)
     
 print("Fin")
 
