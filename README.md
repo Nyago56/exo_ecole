@@ -1,4 +1,3 @@
-# exo_ecole
 ## Cour docker
 
 **Image exemple :**
@@ -64,7 +63,26 @@ docker ps -a
 ```
 docker run -d dockerbg
 ```
-## création d'un code python infini
+## Code python
+```
+import time
+
+i = 0
+print("Début")
 
 
-## mise dans un docker du code + lancement
+while True:
+    try:
+        i = i + 1
+        for o in range(i):
+            print("CIAO", end='', flush=True)
+        time.sleep(1)
+        print(" ")
+    except KeyboardInterrupt as Exc:
+        repr(Exc)
+        break
+
+    
+    
+print("Fin")
+```
