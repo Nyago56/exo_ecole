@@ -1,6 +1,6 @@
 # exo_ecole
 ##Cour docker
-Image > odoo / mysql /adminser
+> Image odoo / mysql /adminser
 
 ## création d'un code python infini
 
