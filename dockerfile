@@ -5,7 +5,9 @@ FROM python:3.9-slim-bullseye
 WORKDIR /app
 
 # Copiez le script Python dans le conteneur
-COPY main.py /app/
+COPY com_bdd.py /app/
 
 # Commande à exécuter lors du démarrage du conteneur
-CMD ["python", "main.py"]
+CMD ["python", "com_bdd.py"]
+#Ajout de la bibliothèque au container
+RUN pip install mysql-connector-python
