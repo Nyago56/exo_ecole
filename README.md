@@ -45,9 +45,9 @@ COPY main.py /app/
 
 # Commande à exécuter lors du démarrage du conteneur
 CMD ["python", "main.py"]
+```
+> docker run "nom container"
 
-
-> docker run "nom container"```
 
 ## création d'un code python infini
 
