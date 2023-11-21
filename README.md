@@ -2,4 +2,4 @@
 ## création d'un code python infini
 
 
-##mise dans un docker du code + lancement
+## mise dans un docker du code + lancement
