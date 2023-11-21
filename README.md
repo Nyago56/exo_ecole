@@ -1,5 +1,5 @@
 # exo_ecole
-##Cour docker
+## Cour docker
 
 **Image :**
 
