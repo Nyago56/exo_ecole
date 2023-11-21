@@ -13,6 +13,14 @@
 
 > docker pull "nom image"
 
+**Suprimer une image :**
+
+> docker rmi "nom image"
+
+**run un container :**
+
+> docker run "nom image"
+
 ## création d'un code python infini
 
 
