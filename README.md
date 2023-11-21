@@ -1,4 +1,4 @@
-## Cour docker
+## Cours docker
 
 **Image exemple :**
 
