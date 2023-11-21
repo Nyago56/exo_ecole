@@ -46,10 +46,24 @@ COPY main.py /app/
 # Commande à exécuter lors du démarrage du conteneur
 CMD ["python", "main.py"]
 ```
+3. Build le container dans une invite de commande
+```
+docker build -t dockerbg .
+```
+4. Lancer le container dans l'invite de commande
+```
+docker run dockerbg
+```
+- Vérification de l'état du conteneur :
 
-> docker run "nom container"
+```
+docker ps -a
+```
+- Voir l'id du docker :
 
-
+```
+docker run -d dockerbg
+```
 ## création d'un code python infini
 
 
