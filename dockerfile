@@ -1,5 +1,5 @@
 # Utilisez une image Python officielle en tant qu'image parent
-FROM python:3.9
+FROM python:3.9-slim-bullseye
 
 # Définissez le répertoire de travail dans le conteneur
 WORKDIR /app
