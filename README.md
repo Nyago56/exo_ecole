@@ -1,15 +1,18 @@
 # exo_ecole
 ## Cour docker
 
-**Image :**
+**Image exemple :**
 
 > odoo / mysql /adminser
 
+**Voir Image :**
+
+> docker images
 
 **Ajout d'une image :**
 
-> odoo / mysql /adminser
-> 
+> docker pull "nom image"
+
 ## création d'un code python infini
 
 
