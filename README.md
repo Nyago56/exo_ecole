@@ -1,7 +1,7 @@
 # exo_ecole
 ##Cour docker
 
-**Image**
+**Image :**
 
 > odoo / mysql /adminser
 
