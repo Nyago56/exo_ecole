@@ -12,7 +12,7 @@ while True:
         time.sleep(1)
         print(" ")
     except KeyboardInterrupt as Exc:
-        repr(Exc)
+        print(repr(Exc))
         break
 
     
