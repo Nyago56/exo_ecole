@@ -4,66 +4,6 @@ tables = None
 cursor = None
 
 #=======================================================================================================================
-
-def init():
-
-    global mydb
-    global tables
-    global cursor
-
-    print("Connexion à la base de données")
-
-    # Remplacez les valeurs suivantes par les informations spécifiques à votre configuration
-    host = '172.19.0.1'
-    user = 'root'
-    password = 'uimm'
-    database = 'data_indus'
-
-    # Créez la connexion
-    mydb = mysql.connector.connect(
-        host=host,
-        user=user,
-        password=password,
-        database=database
-    )
-
-    # Créez un curseur
-    cursor = mydb.cursor()
-
-    # Exécutez une requête SQL pour récupérer des données de chaque table
-    tables = ['adresse', 'camera', 'controle_fuite', 'equipement_industriel', 'langue',
-            'mission', 'numero_mission', 'resident', 'scan_code_barre', 'site', 'utilisateur', 'utilise']
-    
-#-----------------------------------------------------------------------------------------------------------------------------
-
-def gettable(table):
-        
-    print(f"\nContenu de la table '{table}':")
-
-    # Exécutez une requête SQL pour récupérer tous les éléments de la table
-    cursor.execute(f"SELECT * FROM {table}")
-
-    # Récupérez toutes les lignes résultantes
-    rows = cursor.fetchall()
-
-    # Affichez les résultats
-    for row in rows:
-        print(row)
-
-#-----------------------------------------------------------------------------------------------------------------------------
-
-def gettables():
-    for table in tables:
-        gettable(table)
-
-#-----------------------------------------------------------------------------------------------------------------------------
-
-def close():
-    # Fermez le curseur et la connexion
-    cursor.close()
-    mydb.close()
-#=======================================================================================================================
-
 class IF_bdd:
     "Classe object d'interface bdd sql"
     def __init__(self):
@@ -119,10 +59,6 @@ class IF_bdd:
 #=======================================================================================================================
 
 if __name__=="__main__":
-    init()
-    #gettables()
-    gettable('site')
-    close()
 
     bdd = IF_bdd()
     user_name = input("Entrez votre nom d'utilisateur : ")
