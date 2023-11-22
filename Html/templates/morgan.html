@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Lotode Morgan : le mal incarné</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
   <div class="container">
@@ -29,7 +29,7 @@
           <li>En 1975, il a torturé et assassiné un homme d'affaires. Il l'a brûlé vif et a ensuite jeté ses restes dans un lac.</li>
           <li>En 1980, il a violé et tué une famille de quatre personnes. Il a massacré les parents et leurs deux enfants avec une hache.</li>
         </ul>
-        <img src="morgan.jpeg" alt="Lotode Morgan" width="300px">
+        <img src="{{ url_for('static', filename='image/morgan.jpeg') }}" alt="Lotode Morgan" width="300px">
       </div>
 
       <div class="personnalité">
