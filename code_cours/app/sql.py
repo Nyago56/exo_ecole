@@ -1,8 +1,4 @@
 import mysql.connector
-mydb = None
-tables = None
-cursor = None
-
 #=======================================================================================================================
 class IF_bdd:
     "Classe object d'interface bdd sql"
@@ -59,9 +55,18 @@ class IF_bdd:
 #=======================================================================================================================
 
 if __name__=="__main__":
-
+    
     bdd = IF_bdd()
-    user_name = input("Entrez votre nom d'utilisateur : ")
-    password = input("Veuillez entrer votre mdp : ")
-    if bdd.connect('172.19.0.1',user_name,password,'data_indus'): 
-        bdd.gettable('site')
+
+    while True:
+        user_name = input("Veuillez entrer votre nom d'utilisateur : ")
+        password = input("Veuillez entrer votre mdp : ")
+
+        if bdd.connect('172.19.0.1', user_name, password, 'data_indus'):
+            break  # Sort de la boucle si la connexion est réussie
+        else:
+            print("Nom d'utilisateur ou mot de passe incorrect. Réessayez.")
+
+    # Une fois la connexion réussie, récupérez la table 'site'
+    table  = input("Veuillez entrer la table à accéder : ")
+    bdd.gettable(table)
