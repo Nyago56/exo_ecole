@@ -1,0 +1,45 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+  }
+  
+  .container {
+    width: 800px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .biographie, .crimes, .personnalité, .héritage, .malveillance {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .biographie h2, .crimes h2, .personnalité h2, .héritage h2, .malveillance h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+  
+  .biographie p, .crimes p, .personnalité p, .héritage p, .malveillance p {
+    line-height: 1.5;
+  }
+  
+  .crimes img {
+    float: right;
+  }
+  
+  .malveillance ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .malveillance ul li {
+    margin-bottom: 10px;
+  }
