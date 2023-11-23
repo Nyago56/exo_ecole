@@ -53,20 +53,3 @@ class IF_bdd:
             for row in rows:
                 print(row)
 #=======================================================================================================================
-
-if __name__=="__main__":
-    
-    bdd = IF_bdd()
-
-    while True:
-        user_name = input("Veuillez entrer votre nom d'utilisateur : ")
-        password = input("Veuillez entrer votre mdp : ")
-
-        if bdd.connect('172.19.0.1', user_name, password, 'data_indus'):
-            break  # Sort de la boucle si la connexion est réussie
-        else:
-            print("Nom d'utilisateur ou mot de passe incorrect. Réessayez.")
-
-    # Une fois la connexion réussie, récupérez la table 'site'
-    table  = input("Veuillez entrer la table à accéder : ")
-    bdd.gettable(table)

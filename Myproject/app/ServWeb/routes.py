@@ -1,4 +1,4 @@
-from app import app
+from app.ServWeb import app
 
 @app.route('/') #decorators
 @app.route('/index')
