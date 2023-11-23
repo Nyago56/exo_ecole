@@ -1,0 +1,27 @@
+<!-- /home/user/Bureau/exo_ecole-1/Myproject/app/ServWeb/templates/afficher_donnees.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Afficher les données</title>
+</head>
+<body>
+    <h1>Données de la base de données :</h1>
+    <table>
+        <thead>
+            <tr>
+                <!-- Ajoutez ici les en-têtes de colonne en fonction de votre table -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    {% for value in row %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

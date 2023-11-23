@@ -52,4 +52,19 @@ class IF_bdd:
             # Affichez les résultats
             for row in rows:
                 print(row)
+
+    def get_data_from_table(self, table):
+        if self.mydb is not None:
+            self.cursor.execute(f"SELECT * FROM {table}")
+            rows = self.cursor.fetchall()
+            return rows
+        else:
+            return []
 #=======================================================================================================================
+if __name__ == "__main__":
+    bdd_instance = IF_bdd()
+    if bdd_instance.connect('172.19.0.1', 'root', 'uimm', 'data_indus'):
+        data_from_table = bdd_instance.get_data_from_table('site')
+        print(data_from_table)
+    else:
+        print("Erreur de connexion à la base de données.")
