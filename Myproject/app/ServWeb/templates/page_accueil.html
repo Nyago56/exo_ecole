@@ -4,179 +4,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page d'Accueil</title>
+  <title>Trigo - Accueil</title>
+
+  <!-- Icône de favicon distinct -->
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='image/icon.png') }}">
+
   <style>
-    .PageDAcceuil {
-      width: 1440px;
-      height: 1024px;
-      position: relative;
-      background: white;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
     }
 
-    .NewTrigoLogoWhiteGreen {
-      width: 260px;
-      height: 52px;
-      left: 1660px;
-      top: 6px;
-      position: absolute;
-    }
-
-    .Rectangle27 {
-      width: 360px;
-      height: 137px;
-      left: 540px;
-      top: 733px;
-      position: absolute;
-      background: #0067B8;
-    }
-
-    .Rectangle29 {
-      width: 1440px;
-      height: 1024px;
-      left: 0;
-      top: 64px;
-      position: absolute;
-      background: linear-gradient(180deg, #004983 0%, rgba(0, 73, 131, 0.33) 100%);
-    }
-
-    .DataIndustrielle {
-      width: 1331px;
-      height: 124px;
-      left: 55px;
-      top: 279px;
-      position: absolute;
-      text-align: center;
-      color: white;
-      font-size: 96px;
-      font-family: 'Inter';
-      font-weight: 900;
-      line-height: 124.31px;
-      word-wrap: break-word;
-    }
-
-    .Group12 {
-      width: 1440px;
-      height: 64px;
-      left: 0;
-      top: 0;
-      position: absolute;
-    }
-
-    .Rectangle15 {
-      width: 1440px;
-      height: 64px;
-      left: 0;
-      top: 0;
-      position: absolute;
-      background: #004983;
-    }
-
-    .NewTrigoLogoWhiteGreen {
-      width: 243px;
-      height: 49px;
-      left: 2px;
-      top: 8px;
-      position: absolute;
-    }
-
-    .NewTrigoLogoWhiteGreen {
-      width: 935px;
-      height: 204px;
-      left: 253px;
-      top: 483px;
-      position: absolute;
-    }
-
-    .Component1 {
-      width: 375px;
-      height: 150px;
-      padding-left: 135px;
-      padding-right: 135px;
-      padding-top: 41px;
-      padding-bottom: 41px;
-      left: 533px;
-      top: 795px;
-      position: absolute;
-      background: #0067B8;
-      justify-content: center;
+    header {
+      background-color: #004983;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 10px;
-      display: inline-flex;
     }
 
-    .Text {
+    header img {
+      max-width: 300px; /* Ajustez la largeur maximale selon vos besoins */
+      height: auto; /* Assurez-vous que la hauteur est ajustée automatiquement */
+    }
+
+    header p {
       text-align: center;
       color: white;
-      font-size: 96px;
-      font-family: 'Inter';
-      font-weight: 400;
-      word-wrap: break-word;
+      font-size: 24px;
+      font-weight: bold;
+      margin-right: 20px;
     }
 
-    .ListeLangue {
-      width: 373px;
-      height: 275px;
-      padding-bottom: 201px;
-      padding-left: 214px;
-      left: 907px;
-      top: 0;
-      position: absolute;
-      justify-content: flex-end;
-      align-items: center;
-      display: inline-flex;
-    }
-
-    .Group9 {
-      width: 159px;
-      height: 74px;
-      position: relative;
-    }
-
-    .Image2 {
-      width: 94px;
-      height: 74px;
-      left: 0;
-      top: 0;
-      position: absolute;
-    }
-
-    .En {
-      width: 102px;
-      height: 42px;
-      left: 54px;
-      top: 13px;
-      position: absolute;
+    nav {
+      background-color: #0067B8;
+      padding: 10px;
       text-align: center;
+    }
+
+    nav a {
       color: white;
-      font-size: 40px;
-      font-family: 'Inter';
-      font-weight: 400;
-      word-wrap: break-word;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Style du bouton de connexion */
+    .login-button {
+      background-color: #004983;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none; /* Supprimer la décoration du texte */
+      border-radius: 5px;
     }
   </style>
 </head>
 
 <body>
-  <div class="PageDAcceuil">
-    <img class="NewTrigoLogoWhiteGreen" src="https://via.placeholder.com/260x52" />
-    <div class="Rectangle27"></div>
-    <div class="Rectangle29"></div>
-    <div class="DataIndustrielle">DATA INDUSTRIELLE</div>
-    <div class="Group12">
-      <div class="Rectangle15"></div>
-      <img class="NewTrigoLogoWhiteGreen" src="https://via.placeholder.com/243x49" />
-    </div>
-    <img class="NewTrigoLogoWhiteGreen" src="https://via.placeholder.com/935x204" />
-    <div class="Component1">
-      <div class="Text">Entrer</div>
-    </div>
-    <div class="ListeLangue">
-      <div class="Group9">
-        <img class="Image2" src="https://via.placeholder.com/94x74" />
-        <div class="En">EN</div>
-      </div>
-    </div>
-  </div>
+  <header>
+    <!-- Ajout de l'image logo.png -->
+    <img src="{{ url_for('static', filename='image/logo.svg') }}" alt="Logo Trigo">
+    <p>DATA CENTER APPLICATION</p>
+  </header>
+
+  <nav>
+    <a href="/">Accueil</a>
+    <a href="/afficher_donnees">Mission</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Bienvenue chez Trigo</h2>
+    <p>Texte d'introduction sobre et accrocheur.</p>
+
+    <!-- Bouton de connexion -->
+    <a href="/login" class="login-button">Connexion</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Trigo. Tous droits réservés.</p>
+  </footer>
 </body>
 
 </html>

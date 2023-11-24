@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+header {
+  background-color: #004983;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+header img {
+  max-width: 300px;
+  height: auto;
+}
+
+header p {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+nav {
+  background-color: #0067B8;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+section {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Style for the login tab */
+.login-box {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 auto; /* Centrer la boîte horizontalement */
+  margin-top: 20px; /* Ajuster la marge supérieure selon les besoins */
+}
+
+.login-input {
+  margin: 10px;
+  padding: 10px;
+  width: calc(100% - 20px); /* Ajuster la largeur de l'entrée */
+  box-sizing: border-box; /* Inclure le rembourrage dans le calcul de la largeur */
+}
+
+.login-button {
+  background-color: #004983;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
