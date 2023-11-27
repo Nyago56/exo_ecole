@@ -5,15 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trigo - Accueil</title>
-
-    <!-- Icône de favicon distinct -->
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='image/icon.png') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
 </head>
 
 <body>
     <header>
-        <!-- Ajout de l'image logo.png -->
         <img src="{{ url_for('static', filename='image/logo.svg') }}" alt="Logo Trigo">
         <p>DATA CENTER APPLICATION</p>
     </header>
@@ -29,10 +26,9 @@
         <h2>Bienvenue chez Trigo</h2>
         <p>Texte d'introduction sobre et accrocheur.</p>
 
-        <!-- Boîte de connexion -->
         <div class="login-box">
             <h3>Login</h3>
-            <form action="/login" method="post"> <!-- Changer l'URL de l'action au besoin -->
+            <form action="/login" method="post">
                 <label for="username">Nom d'utilisateur :</label>
                 <input type="text" id="username" name="username" class="login-input" required>
 
