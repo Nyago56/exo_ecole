@@ -1,0 +1,21 @@
+ /home/user/Bureau/exo_ecole-1/Myproject/
+│
+├── app/
+│   ├── __init__.py
+│   ├── ServWeb/
+│   │   ├── __init__.py
+│   │   ├── routes.py
+│   │   ├── static/
+│   │   │    ├── css
+│   │   │    │  └── style.css
+│   │   └── templates/
+│   │       ├── login.html
+│   │       ├── mission.html
+│   │       └── affiche_donnees.html
+│   └── Bdd/
+│       ├── __init__.py
+│       └── bdd_recup.py
+│       
+├── Main.py
+└── ...
+

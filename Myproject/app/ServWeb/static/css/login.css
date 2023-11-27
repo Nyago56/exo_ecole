@@ -10,6 +10,12 @@ body {
   height: 100vh;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 header {
   background-color: #004983;
   padding: 20px;
@@ -17,19 +23,22 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-top: 0; /* Ajusté à 0 pour coller l'en-tête en haut */
 }
 
+
 header img {
+  margin-top: 0; /* Ajusté à 0 pour coller l'image en haut */
   max-width: 300px;
   height: auto;
 }
 
 header p {
-  text-align: center;
+  margin-top: 0; /* Ajusté à 0 pour coller le texte en haut */
+  text-align: right;
   color: white;
   font-size: 24px;
   font-weight: bold;
-  margin-right: 20px;
 }
 
 nav {
@@ -57,9 +66,10 @@ footer {
   padding: 10px;
   text-align: center;
   width: 100%;
+  margin-bottom: 0; /* Ajusté à 0 pour coller le pied de page en bas */
 }
 
-/* Style for the login tab */
+
 .login-box {
   background-color: white;
   padding: 20px;
@@ -67,15 +77,15 @@ footer {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
-  margin: 0 auto; /* Centrer la boîte horizontalement */
-  margin-top: 20px; /* Ajuster la marge supérieure selon les besoins */
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .login-input {
   margin: 10px;
   padding: 10px;
-  width: calc(100% - 20px); /* Ajuster la largeur de l'entrée */
-  box-sizing: border-box; /* Inclure le rembourrage dans le calcul de la largeur */
+  width: calc(100% - 20px);
+  box-sizing: border-box;
 }
 
 .login-button {
