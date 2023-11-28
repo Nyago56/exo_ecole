@@ -6,8 +6,13 @@
 │   │   ├── __init__.py
 │   │   ├── routes.py
 │   │   ├── static/
-│   │   │    ├── css
+│   │   │    ├── css/
 │   │   │    │  └── style.css
+│   │   │    ├── image/
+│   │   │    │  ├── icon.ico
+│   │   │    │  ├── icon.png
+│   │   │    │  └── logo.svg
+│   │   │    └── js/
 │   │   └── templates/
 │   │       ├── login.html
 │   │       ├── mission.html
