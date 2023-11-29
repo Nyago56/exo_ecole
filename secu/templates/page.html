@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Utilisateur</title>
+</head>
+<body>
+    <h1>Créer un Nouvel Utilisateur</h1>
+
+    <!-- Ajout de la fonction createUserForm dans le script -->
+    <script>
+        function createUserForm() {
+            var form = document.getElementById("userForm");
+            form.style.display = "block";  // Affiche le formulaire
+        }
+
+        // Appeler la fonction createUserForm au chargement de la page
+        window.onload = createUserForm;
+    </script>
+
+    <!-- Formulaire -->
+    <form id="userForm" style="display: none;">
+        <label for="username">Nom d'utilisateur:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="permission">Niveau de permission:</label>
+        <input type="text" id="permission" name="permission" required><br>
+
+        <button type="button" onclick="createUser()">OK</button>
+    </form>
+
+    <!-- Tableau des utilisateurs -->
+    <table border="1">
+        <tr>
+            <th>Nom d'utilisateur</th>
+            <th>Mot de passe</th>
+            <th>Niveau de permission</th>
+        </tr>
+        {% for user in user_data %}
+            <tr>
+                <td>{{ user[0] }}</td>
+                <td>{{ user[1] }}</td>
+                <td>{{ user[2] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <!-- Script pour envoyer les données au serveur Flask -->
+    <script>
+        function createUser() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var permission = document.getElementById("permission").value;
+
+            // Envoi des données au serveur Flask
+            fetch('/create_user', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password,
+                    permission: permission
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // Rafraîchir la page pour afficher le nouvel utilisateur
+                location.reload();
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>

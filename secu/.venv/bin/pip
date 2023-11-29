@@ -1,4 +1,4 @@
-#!/home/user/Bureau/exo_ecole-1/secu/.venv/bin/python3
+#!/home/user/Documents/secu/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
