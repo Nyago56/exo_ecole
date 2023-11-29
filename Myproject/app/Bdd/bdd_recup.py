@@ -51,6 +51,28 @@ class IF_bdd:
             return columns, rows
         else:
             return [], []
+    
+#-------------------------------------------------------------------------------------------------------------
+
+    def verify_user_credentials(self, username, password):
+        if self.mydb is not None:
+            query = "SELECT * FROM utilisateur WHERE nom_utilisateur = %s AND mdp = %s"
+            self.cursor.execute(query, (username, password))
+            result = self.cursor.fetchone()
+            return result is not None
+        else:
+            return False
+        
+#-------------------------------------------------------------------------------------------------------------
+
+    def get_data_from_donnee(self):
+        if self.mydb is not None:
+            self.cursor.execute("SELECT Valeur FROM Donnee")
+            data = self.cursor.fetchall()
+            valeurs = [int(row[0]) for row in data]
+            return valeurs
+        else:
+            return []
         
 #-------------------------------------------------------------------------------------------------------------
 #=============================================================================================================
@@ -58,8 +80,10 @@ class IF_bdd:
 if __name__ == "__main__":
     bdd_instance = IF_bdd()
     if bdd_instance.connect('172.19.0.1', 'root', 'uimm', 'data_indus'):
-        columns, data_from_table = bdd_instance.get_data_from_table('site')
+        columns, data_from_table = bdd_instance.get_data_from_table('utilisateur')
+        tere = bdd_instance.verify_user_credentials('user1', 'pass1')
         print("Columns:", columns)
         print("Data:", data_from_table)
+        print("truc dans var : ",tere)
     else:
         print("Erreur de connexion à la base de données.")
