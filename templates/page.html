@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trigo - Accueil</title>
+
+  <!-- Icône de favicon distinct -->
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='image/icon.png') }}">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    header {
+      background-color: #004983;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header img {
+      max-width: 300px; /* Ajustez la largeur maximale selon vos besoins */
+      height: auto; /* Assurez-vous que la hauteur est ajustée automatiquement */
+    }
+
+    header p {
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      margin-right: 20px;
+    }
+
+    nav {
+      background-color: #0067B8;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Style du bouton de connexion */
+    .login-button {
+      background-color: #004983;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none; /* Supprimer la décoration du texte */
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- Ajout de l'image logo.png -->
+    <img src="{{ url_for('static', filename='image/logo.svg') }}" alt="Logo Trigo">
+    <p>DATA CENTER APPLICATION</p>
+  </header>
+
+  <nav>
+    <a href="/">Accueil</a>
+    <a href="/afficher_donnees">Mission</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Bienvenue chez Trigo</h2>
+    <p>Texte d'introduction sobre et accrocheur.</p>
+
+    <!-- Bouton de connexion -->
+    <a href="/login" class="login-button">Connexion</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Trigo. Tous droits réservés.</p>
+  </footer>
+</body>
+
+</html>
